@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Admin - Gestión de Pedidos</title>
+    <link rel="stylesheet" href="../../../style.css">
+</head>
+<body style="display: flex; margin: 0; min-height: 100vh; font-family: sans-serif; background-color: #f8f9fa;">
+
+    <aside style="width: 240px; background-color: #333; color: white; padding: 20px; display: flex; flex-direction: column; gap: 15px;">
+        <h3 style="color: #ff5722; margin-top: 0;">FoodStore Admin</h3>
+        <hr style="border-color: #555; width: 100%;">
+        <a href="../adminHome/adminHome.html" style="color: #ccc; text-decoration: none;">📊 Dashboard</a>
+        <a href="../categories/categories.html" style="color: #ccc; text-decoration: none;">📁 Categorías</a>
+        <a href="../products/products.html" style="color: #ccc; text-decoration: none;">🍔 Productos</a>
+        <a href="#" style="color: white; text-decoration: none; font-weight: bold;">📦 Pedidos Admin</a>
+    </aside>
+
+    <main style="flex: 1; padding: 30px;">
+        <div style="display: flex; justify-content: space-between; align-items: center; border-bottom: 2px solid #ff5722; padding-bottom: 10px;">
+            <h2 style="margin: 0;">Control de Pedidos Clientes</h2>
+            
+            <div>
+                <label for="filtro-estado" style="font-weight: bold;">Filtrar Estado: </label>
+                <select id="filtro-estado" style="padding: 6px; border-radius: 4px;">
+                    <option value="TODOS">Todos los pedidos</option>
+                    <option value="PENDIENTE">Pendiente</option>
+                    <option value="CONFIRMADO">Confirmado</option>
+                    <option value="TERMINADO">Terminado</option>
+                    <option value="CANCELADO">Cancelado</option>
+                </select>
+            </div>
+        </div>
+
+        <section id="contenedor-pedidos-admin" style="display: flex; flex-direction: column; gap: 15px; margin-top: 20px;">
+            </section>
+
+        <div id="modal-pedido-admin" style="display: none; position: fixed; top: 0; left: 0; width: 100%; height: 100%; background: rgba(0,0,0,0.5); justify-content: center; align-items: center; z-index: 2000;">
+            <div style="background: white; padding: 25px; border-radius: 8px; width: 500px; box-shadow: 0 4px 10px rgba(0,0,0,0.3);">
+                <h3 style="color: #ff5722; margin-top: 0;" id="admin-modal-titulo">Detalles</h3>
+                <hr>
+                <div id="admin-modal-contenido" style="margin-top: 15px; line-height: 1.6;"></div>
+                <div style="margin-top: 20px; display: flex; justify-content: flex-end;">
+                    <button id="btn-cerrar-admin-modal" style="background: #666; padding: 8px 15px; color: white; border: none; border-radius: 4px; cursor: pointer;">Cerrar</button>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <script type="module" src="./orders.ts"></script>
+</body>
+</html>

@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/png" href="/pizza-icon.png">
+    <script type="module" src="cart.ts"></script>
+    <link rel="stylesheet" href="cart.css">
+    <title>Carrito</title>
+</head>
+<body>
+    <header>
+        <h1 id="titulo">Food Store</h1>
+    </header>
+
+    <nav id="barra-nav">
+        <ul>
+            <li><a href="/src/pages/store/home/home.html">Inicio</a></li>
+            <li><a href="../../auth/login/login.html">Iniciar Sesión</a></li>
+            <li><a href="../../auth/register/register.html">Registrarse</a></li>
+            <li><a href="../cart/cart.html">Carrito <span id="contador-carrito">0</span></a></li>
+            <li><a href="../../client/orders/orders.html">Mis Pedidos</a></li>
+            <li><a href="../../admin/adminHome/adminHome.html" style="color: #ff6347; font-weight: bold;">🔧 Panel Admin</a></li>
+            <li id="info-sesion" style="margin-left: auto; display: flex; align-items: center; gap: 10px; padding-right: 15px;"></li>
+        </ul>
+    </nav>
+    <hr>
+    
+    <main>
+        <h2>Tu Carrito de Compras</h2>
+        <section id="contenedor-carrito"></section>
+
+        <div id="carrito-total" style="background: #fff; padding: 15px; border-radius: 8px; box-shadow: 0 2px 5px rgba(0,0,0,0.05); margin-bottom: 20px;"></div>
+        
+        <div style="margin-bottom: 20px; display: flex; gap: 10px;">
+            <button id="btn-borrarCarrito">Vaciar Carrito</button>
+        </div>
+
+        <div id="seccion-checkout" style="display: none; background: white; padding: 20px; border-radius: 8px; box-shadow: 0 2px 5px rgba(0,0,0,0.05); margin-top: 20px; max-width: 500px;">
+            <h3>Datos de Entrega y Pago</h3>
+            <form id="form-checkout">
+                <div style="margin-bottom: 15px;">
+                    <label for="checkout-telefono">Teléfono / Celular (Requerido):</label><br>
+                    <input type="text" id="checkout-telefono" style="width: 100%; padding: 8px; margin-top: 5px;" required>
+                </div>
+                <div style="margin-bottom: 15px;">
+                    <label for="checkout-pago">Forma de Pago:</label><br>
+                    <select id="checkout-pago" style="width: 100%; padding: 8px; margin-top: 5px;" required>
+                        <option value="TARJETA">Tarjeta</option>
+                        <option value="TRANSFERENCIA">Transferencia</option>
+                        <option value="EFECTIVO">Efectivo</option>
+                    </select>
+                </div>
+                <button type="submit" id="btn-finalizar" style="width: 100%; background-color: #4caf50;">Confirmar Pedido</button>
+            </form>
+        </div>
+    </main>
+</body>
+</html>

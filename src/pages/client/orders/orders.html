@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/png" href="/pizza-icon.png">
+    <link rel="stylesheet" href="../../store/home/home.css">
+    <title>Mis Pedidos</title>
+</head>
+<body>
+    <header>
+        <h1 id="titulo">Food Store</h1>
+    </header>
+
+    <nav id="barra-nav">
+        <ul>
+            <li><a href="/src/pages/store/home/home.html">Inicio</a></li>
+            <li><a href="../../auth/login/login.html">Iniciar Sesión</a></li>
+            <li><a href="../../auth/register/register.html">Registrarse</a></li>
+            <li><a href="../../store/cart/cart.html">Carrito <span id="contador-carrito">0</span></a></li>
+            <li><a href="../../admin/adminHome/adminHome.html" style="color: #ff6347; font-weight: bold;">🔧 Panel Admin</a></li>
+            <li id="info-sesion" style="margin-left: auto; display: flex; align-items: center; gap: 10px; padding-right: 15px;"></li>
+        </ul>
+    </nav>
+    <hr>
+
+    <main style="max-width: 900px; margin: 20px auto; padding: 20px;">
+        <h2>Mis Pedidos Pasados</h2>
+        
+        <section id="lista-pedidos-cliente" style="display: flex; flex-direction: column; gap: 15px; margin-top: 20px;">
+            </section>
+
+        <div id="modal-detalle-pedido" style="display: none; position: fixed; top: 0; left: 0; width: 100%; height: 100%; background: rgba(0,0,0,0.5); justify-content: center; align-items: center; z-index: 2000;">
+            <div style="background: white; padding: 25px; border-radius: 8px; width: 500px; max-height: 85vh; overflow-y: auto; box-shadow: 0 4px 10px rgba(0,0,0,0.3);">
+                <h3 style="color: #ff6347; margin-top: 0;" id="modal-titulo-id">Detalle del Pedido</h3>
+                <hr>
+                <div id="modal-contenido-info" style="margin-top: 15px; line-height: 1.6;">
+                    </div>
+                <div style="margin-top: 20px; display: flex; justify-content: flex-end;">
+                    <button id="btn-cerrar-modal-pedido" style="background: #666; padding: 8px 15px;">Cerrar</button>
+                </div>
+            </div>
+        </div>
+    </main>
+    <script type="module" src="./orders.ts"></script>
+</body>
+</html>

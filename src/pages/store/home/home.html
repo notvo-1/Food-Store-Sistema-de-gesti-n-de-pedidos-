@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/png" href="/pizza-icon.png">
+    <link rel="stylesheet" href="home.css">
+    <script type="module" src="home.ts"></script>
+    <title>Food Store</title>
+</head>
+<body>
+    <header>
+        <h1 id="titulo">Food Store</h1>
+    </header>
+
+<nav id="barra-nav">
+    <ul>
+        <li><a href="/src/pages/store/home/home.html">Inicio</a></li>
+        <li><a href="../../auth/login/login.html">Iniciar Sesión</a></li>
+        <li><a href="../../auth/register/register.html">Registrarse</a></li>
+        <li><a href="../cart/cart.html">Carrito <span id="contador-carrito">0</span></a></li>
+        <li><a href="../../client/orders/orders.html">Mis Pedidos</a></li>
+        <li><a href="../../admin/adminHome/adminHome.html" style="color: #ff6347; font-weight: bold;">🔧 Panel Admin</a></li>
+        <li id="info-sesion" style="margin-left: auto; display: flex; align-items: center; gap: 10px; padding-right: 15px;"></li>
+    </ul>
+</nav>
+<div id="modal-detalle-cliente" style="display: none; position: fixed; top: 0; left: 0; width: 100%; height: 100%; background-color: rgba(0,0,0,0.6); justify-content: center; align-items: center; z-index: 2000;">
+    <div style="background-color: white; padding: 25px; border-radius: 12px; max-width: 500px; width: 90%; box-shadow: 0 4px 15px rgba(0,0,0,0.3); position: relative;">
+        
+        <button id="cerrar-modal-cliente" style="position: absolute; top: 10px; right: 15px; background: none; color: #333; font-size: 20px; cursor: pointer; margin: 0; padding: 0;">&times;</button>
+        
+        <div id="contenido-modal-cliente" style="display: flex; flex-direction: column; gap: 15px; margin-top: 15px;">
+            </div>
+    </div>
+</div>
+    <!-- <hr> -->
+    <div class="contenedor-principal">
+    <aside>
+        <ul>
+            <h2>Categorias</h2>
+            <ul id="lista-categorias"></ul>
+        </ul>
+    </aside>
+    
+    <main>
+        <form>
+            <label for="buscarProducto">Buscar Productos</label>
+            <input type="text" name="buscarProducto" id="buscarProducto" placeholder="Ej: hamburguesa">
+            <button type="submit">Buscar</button>
+        </form>
+        
+        <h2>Productos Destacados</h2>
+        <section id="contenedor-productos"></section>
+    </main>
+    </div>
+    <hr>
+<footer>
+    <p>© 2024 Food Store. Todos los derechos reservados</p>
+    <p>Contacto: <a href="#">info@foodstore.com</a></p>
+</footer>
+</body>
+</html>

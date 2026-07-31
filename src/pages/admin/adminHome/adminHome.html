@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Panel de Administración - Food Store</title>
+    <link rel="stylesheet" href="../../../style.css">
+</head>
+<body style="display: flex; margin: 0; min-height: 100vh; font-family: sans-serif; background-color: #f8f9fa;">
+
+    <aside style="width: 240px; background-color: #333; color: white; padding: 20px; display: flex; flex-direction: column; gap: 15px;">
+        <h3 style="color: #ff5722; margin-top: 0;">FoodStore Admin</h3>
+        <hr style="border-color: #555; width: 100%;">
+        <a href="#" style="color: white; text-decoration: none; font-weight: bold;">📊 Dashboard</a>
+        <a href="../categories/categories.html" style="color: #ccc; text-decoration: none;">📁 Categorías</a>
+        <a href="../products/products.html" style="color: #ccc; text-decoration: none;">🍔 Productos</a>
+        <a href="../orders/orders.html" style="color: #ccc; text-decoration: none;">📦 Pedidos Admin</a>
+        <hr style="border-color: #555; width: 100%; margin-top: auto;">
+        <a href="#" id="btn-logout" style="color: #ff8a80; text-decoration: none; font-weight: bold;">🚪 Cerrar Sesión</a>
+    </aside>
+
+    <main style="flex: 1; padding: 30px;">
+        <h2 style="margin-top: 0; border-bottom: 2px solid #ff5722; padding-bottom: 10px;">Panel de Control</h2>
+        
+        <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 20px; margin-top: 20px;">
+            <div style="background-color: white; padding: 20px; border-radius: 8px; box-shadow: 0 4px 6px rgba(0,0,0,0.05); border-left: 5px solid #2196f3;">
+                <p style="margin: 0; color: #666; font-size: 14px; font-weight: bold;">TOTAL CATEGORÍAS</p>
+                <h1 id="stat-categorias" style="margin: 10px 0 0 0; color: #333;">0</h1>
+            </div>
+            <div style="background-color: white; padding: 20px; border-radius: 8px; box-shadow: 0 4px 6px rgba(0,0,0,0.05); border-left: 5px solid #ff9800;">
+                <p style="margin: 0; color: #666; font-size: 14px; font-weight: bold;">TOTAL PRODUCTOS</p>
+                <h1 id="stat-productos" style="margin: 10px 0 0 0; color: #333;">0</h1>
+            </div>
+            <div style="background-color: white; padding: 20px; border-radius: 8px; box-shadow: 0 4px 6px rgba(0,0,0,0.05); border-left: 5px solid #4caf50;">
+                <p style="margin: 0; color: #666; font-size: 14px; font-weight: bold;">PRODUCTOS DISPONIBLES</p>
+                <h1 id="stat-disponibles" style="margin: 10px 0 0 0; color: #333;">0</h1>
+            </div>
+            <div style="background-color: white; padding: 20px; border-radius: 8px; box-shadow: 0 4px 6px rgba(0,0,0,0.05); border-left: 5px solid #9c27b0;">
+                <p style="margin: 0; color: #666; font-size: 14px; font-weight: bold;">TOTAL PEDIDOS</p>
+                <h1 id="stat-pedidos" style="margin: 10px 0 0 0; color: #333;">0</h1>
+            </div>
+        </div>
+    </main>
+
+    <script type="module" src="./adminHome.ts"></script>
+</body>
+</html>

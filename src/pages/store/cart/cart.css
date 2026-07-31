@@ -1,0 +1,122 @@
+:root {
+    --color-primario: #ff6347;
+    --color-fondo: #f8f9fa;
+    --color-texto: #333;
+    --color-blanco: #fff;
+    --color-borde: #ddd;
+    --color-focus: #ff4500;
+}
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+    background-color: var(--color-fondo);
+    color: var(--color-texto);
+}
+
+main {
+    max-width: 1200px;
+    margin: 20px auto;
+    padding: 20px;
+}
+
+h2 {
+    margin-bottom: 20px;
+    border-bottom: 2px solid var(--color-primario);
+    display: inline-block;
+}
+
+
+#contenedor-carrito {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+    gap: 25px;
+    padding: 20px 0;
+}
+
+.articulo-destacado {
+    background-color: var(--color-blanco);
+    padding: 20px;
+    border-radius: 12px;
+    box-shadow: 0px 4px 10px rgba(0,0,0,0.1);
+    display: flex;
+    flex-direction: column;
+    transition: transform 0.3s ease;
+}
+
+/* .articulo-destacado:hover {
+    transform: translateY(-5px);
+} */
+
+.articulo-destacado img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    border-radius: 8px;
+    margin-bottom: 15px;
+}
+
+.articulo-destacado h3 {
+    color: var(--color-primario);
+    margin-bottom: 10px;
+    font-size: 1.4rem;
+}
+
+.articulo-destacado p {
+    font-size: 14px;
+    color: #666;
+    margin-bottom: 10px;
+    flex-grow: 1;
+}
+
+/*button*/
+button {
+    background-color: var(--color-primario);
+    color: var(--color-blanco);
+    border: none;
+    border-radius: 25px;
+    font-weight: bold;
+    padding: 10px;
+    cursor: pointer;
+    transition: background 0.9s;
+    margin-top: 5px;
+}
+
+button:hover {
+    background-color: var(--color-focus);
+}
+
+
+#btnMas {
+    background-color: #555;
+}
+
+#btnMas:hover {
+    background-color: #333;
+}
+
+nav {
+    position: sticky; 
+    top: 0;           
+    z-index: 1000;    
+    background-color: white;
+}
+
+#barra-nav ul {
+    position: sticky;
+    display: flex;
+    list-style: none;
+    background: #333;
+    padding: 10px;
+}
+
+#barra-nav a {
+    color: white;
+    text-decoration: none;
+    padding: 10px 20px;
+}

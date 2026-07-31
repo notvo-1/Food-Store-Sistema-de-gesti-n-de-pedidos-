@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Food Store - Registro</title>
+    <link rel="stylesheet" href="../../../style.css">
+</head>
+<body>
+    <header>
+        <h1 id="titulo">Food Store</h1>
+    </header>
+    <nav id="barra-nav">
+    <ul>
+        <li><a href="/src/pages/store/home/home.html">Inicio</a></li>
+        <li><a href="../../auth/login/login.html">Iniciar Sesión</a></li>
+        <li><a href="../../auth/register/register.html">Registrarse</a></li>
+        <li><a href="../../store/cart/cart.html">Carrito <span id="contador-carrito">0</span></a></li>
+        <li><a href="../../admin/adminHome/adminHome.html" style="color: #ff6347; font-weight: bold;">🔧 Panel Admin</a></li>
+        <li id="info-sesion" style="margin-left: auto; display: flex; align-items: center; gap: 10px; padding-right: 15px;"></li>
+    </ul>
+</nav>
+    <div style="max-width: 400px; margin: 80px auto; padding: 20px; border: 1px solid #ccc; border-radius: 8px; background-color: #fff;">
+        <h2>SuperFood - Registro de Cliente</h2>
+        <form id="registerForm">
+            <div style="margin-bottom: 15px;">
+                <label for="nombre">Nombre Completo:</label><br>
+                <input type="text" id="nombre" style="width: 100%; padding: 8px;" required>
+            </div>
+            <div style="margin-bottom: 15px;">
+                <label for="email">Email:</label><br>
+                <input type="email" id="email" style="width: 100%; padding: 8px;" required>
+            </div>
+            <div style="margin-bottom: 15px;">
+                <label for="password">Contraseña (Mínimo 6 caracteres):</label><br>
+                <input type="password" id="password" style="width: 100%; padding: 8px;" required>
+            </div>
+            <div id="errorMensaje" style="color: red; margin-bottom: 15px; display: none;"></div>
+            <button type="submit" style="width: 100%; padding: 10px; background-color: #ff5722; color: white; border: none; border-radius: 4px; cursor: pointer; font-weight: bold;">
+                Registrarse
+            </button>
+        </form>
+        <p style="margin-top: 15px; text-align: center; font-size: 14px;">
+            ¿Ya tenés cuenta? <a href="../login/login.html" style="color: #ff5722; text-decoration: none;">Iniciá sesión acá</a>
+        </p>
+    </div>
+    <script type="module" src="./register.ts"></script>
+</body>
+</html>
