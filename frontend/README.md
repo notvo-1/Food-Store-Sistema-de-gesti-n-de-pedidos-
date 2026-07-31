@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 # 🍔 Food Store - Trabajo Final Integrador
 
 **Alumno:** Orellana Matias
@@ -160,3 +161,7 @@ backend/data/jpa_db
 ---
 
 Proyecto realizado como Trabajo Final Integrador para la materia **Programación III**.
+=======
+# Food-Store-Sistema-de-gesti-n-de-pedidos-
+Proyecto Final Programcion 3
+>>>>>>> d7e881cd468fbac5b695f7f91d199a05ad76f4bd
